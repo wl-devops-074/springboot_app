@@ -13,7 +13,7 @@
    		<snapshotRepository>
       			<id>snapshots</id>
       			<name>Nexus snapshot Repo</name>
-      			<url>http://172.16.10.10:32000/repository/springbootartifacts/</url>
+      			<url>http://172.16.10.10:32000/repository/spring_boot_artifact/</url>
    		</snapshotRepository>
 	</distributionManagement>
 	<parent>
@@ -168,7 +168,7 @@
    				</executions>
    				<configuration>
       					<serverId>nexus</serverId>
-     					<nexusUrl>http://localhost:8081/nexus/</nexusUrl>
+     					<nexusUrl>http://172.16.10.10:32000/nexus/</nexusUrl>
       					<skipStaging>true</skipStaging>
    				</configuration>
 			</plugin>
