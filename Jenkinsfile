@@ -8,9 +8,9 @@ pipeline {
         // This can be http or https
         NEXUS_PROTOCOL = "http"
         // Where your Nexus is running
-        NEXUS_URL = "localhost:8081"
+        NEXUS_URL = "172.16.10.10:32000"
         // Repository where we will upload the artifact
-        NEXUS_REPOSITORY = "springboot_app_snapshots"
+        NEXUS_REPOSITORY = "spring_boot_artifact"
         // Jenkins credential id to authenticate to Nexus OSS
         NEXUS_CREDENTIAL_ID = "nexus-credentials"
     }
@@ -76,13 +76,7 @@ pipeline {
             }
    }
     
-   stage('build dockerfile') {
-      steps {
-        sh 'rm -rf springboot_app.jar '
-	sh 'curl -u admin:admin123 -o springboot_app.jar  "http://localhost:8081/#browse/browse:springboot_app_snapshots:com%2Fpocteo%2Fspringboot_app%2F1.0.0-SNAPSHOT%2F1.0.0-20190326.113828-1%2Fspringboot_app-1.0.0-20190326.113828-1.jar" -L '
-        sh 'docker build -t springboot_app .'
-      }
-   } 
+   
 
 
 
