@@ -14,7 +14,7 @@
       			<id>snapshots</id>
       			<name>Nexus snapshot Repo</name>
       			<url>http://172.16.10.10:32000/repository/spring_boot_artifact/</url>
-			<generatePom>false</generatePom>
+			
    		</snapshotRepository>
 	</distributionManagement>
 	<parent>
