@@ -76,7 +76,13 @@ pipeline {
             }
    }
     
-   
+   stage('get the artifact from nexus') {
+      steps {
+        sh 'rm -rf springboot_app.jar '
+	      sh 'curl -u admin:admin123 -o springboot_app.jar "http://172.16.10.10:32000/#browse/browse/assets:spring_boot_artifact/com/wlconsulting/springboot_app/1.0.4-SNAPSHOT/*.jar" -L'
+       
+      }
+   } 
 
 
 
