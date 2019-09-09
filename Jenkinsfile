@@ -86,7 +86,7 @@ pipeline {
    
    stage('build docker image') {
       steps {
-        sh 'docker build -t 172.16.10.10:30005/springboot:pr-${ghprbPullId} .'
+        sh 'docker build -t 172.16.10.10:30005/springboot:pr-1 .'
        
       }
    }
