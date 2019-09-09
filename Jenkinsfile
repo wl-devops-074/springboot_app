@@ -86,8 +86,9 @@ pipeline {
    
    stage('build docker image') {
       steps {
-        sh 'docker build -t 172.16.10.10:30005/springboot:pr-1 .'
-       
+        sh 'sudo docker login 172.16.10.10:30005 --username=yosr --password=yosr'
+        sh 'sudo docker build -t 172.16.10.10:30005/springboot:latest .'
+
       }
    }
 
