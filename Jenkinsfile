@@ -13,6 +13,9 @@ pipeline {
         NEXUS_REPOSITORY = "spring_boot_artifact"
         // Jenkins credential id to authenticate to Nexus OSS
         NEXUS_CREDENTIAL_ID = "nexus-credentials"
+        registry = "172.16.10.10:30005"
+        registryCredential = 'privateregistre'
+        dockerImage = ''
     }
     
   stages {
@@ -86,8 +89,9 @@ pipeline {
    
    stage('build docker image') {
       steps {
-        sh 'sudo docker login 172.16.10.10:30005 --username=yosr --password=yosr'
-        sh 'sudo docker build -t 172.16.10.10:30005/springboot:latest .'
+        script {
+          dockerImage = docker.build registry + ":$BUILD_NUMBER"
+        }
 
       }
    }
