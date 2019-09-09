@@ -90,7 +90,7 @@ pipeline {
    stage('build docker image') {
       steps {
         script {
-          dockerImage = docker.build registry/redis:latest 
+          dockerImage = docker.build 172.16.10.10:30005/redis:latest 
         }
 
       }
