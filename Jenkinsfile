@@ -91,9 +91,9 @@ pipeline {
    stage('build docker image') {
       steps {
          script {
-            def imageName = "${registryurl}/${registry}"
+            def imageNamee = "${registryurl}/${registry}"
             docker.withRegistry("http://${registryurl}", "${registryCredential}") {
-                def customImage = docker.build(imageName)
+                def customImage = docker.build(imageNamee)
         
          }
       }
