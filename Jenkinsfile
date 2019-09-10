@@ -90,7 +90,7 @@ pipeline {
    stage('build docker image') {
       steps {
         script {
-          sh 'sudo docker build -t registry + ":$BUILD_NUMBER" .'
+          sh 'REG=$(172.16.10.10:30005/sos) && sudo docker build -t "$REG" + ":$BUILD_NUMBER" . '
         }
 
       }
