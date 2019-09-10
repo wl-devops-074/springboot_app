@@ -13,8 +13,9 @@ pipeline {
         NEXUS_REPOSITORY = "spring_boot_artifact"
         // Jenkins credential id to authenticate to Nexus OSS
         NEXUS_CREDENTIAL_ID = "nexus-credentials"
-        registry = "172.16.10.10:30005/redis"
-        registryCredential = 'privateregistre'
+        registryurl = "172.16.10.10:30005"
+        registry = "redis:latest"
+        registryCredential = "privateregistre"
         dockerImage = ''
     }
     
@@ -89,9 +90,12 @@ pipeline {
    
    stage('build docker image') {
       steps {
-          sh '../script.sh'
+         script {
+            def imageName = "${registryurl}/${registry}"
+            docker.withRegistry("http://${registryurl}", "${registryCredential}") {
+                def customImage = docker.build(imageName)
         
-
+         }
       }
    }
 
