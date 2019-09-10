@@ -91,9 +91,6 @@ pipeline {
    stage('build docker image') {
       steps {
         sh 'sudo docker login -u yosr -p yosr 172.16.10.10:30005'
-      
-        
-         
       }
    }
 
@@ -101,5 +98,4 @@ pipeline {
 
 
   }
-}
 }
