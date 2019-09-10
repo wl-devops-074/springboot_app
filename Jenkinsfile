@@ -90,12 +90,10 @@ pipeline {
    
    stage('build docker image') {
       steps {
-         script {
-            def imageNamee = "${registryurl}/${registry}"
-            docker.withRegistry("http://${registryurl}", "${registryCredential}") {
-                def customImage = docker.build(imageNamee)
+        sh 'sudo docker login -u yosr -p yosr 172.16.10.10:30005'
+      
         
-         }
+         
       }
    }
 
