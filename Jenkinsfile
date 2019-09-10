@@ -90,6 +90,7 @@ pipeline {
    
    stage('build docker image') {
       steps {
+	sh 'sudo docker login -u yosr074 -p 07473122y'
         sh 'sudo docker build -t  yosr074/sos:latest .'
       }
    }
