@@ -90,7 +90,7 @@ pipeline {
    
    stage('build docker image') {
       steps {
-        sh 'sudo docker build -t  172.16.10.10:30005/sos:latest'
+        sh 'sudo docker build -t  172.16.10.10:30005/sos:latest .'
       }
    }
 
