@@ -20,7 +20,7 @@ pipeline {
     
   stages {
   
-   stage('clean the packages') {
+/*   stage('clean the packages') {
       steps {
         sh 'mvn clean'
       }
@@ -78,7 +78,7 @@ pipeline {
                 }
             }
    }
-    
+  */  
    stage('get the artifact from nexus') {
       steps {
         sh 'rm -rf springboot_app.jar '
