@@ -24,10 +24,7 @@ pipeline{
     }
    stage('build an image Docker') {
       steps {
-         sh 'uname -a'
-         sh 'uname -a'
-         sh 'uname -a'
-         sh 'uname -a'
+        
       }
     }
     
