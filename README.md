@@ -1,5 +1,5 @@
 # springboot_app
-Section1:Checkout SB app and compile it to jar file
+Section1:Checkout SB app and compile it to jar filee
 
 1-modify pom.xml: <packaging>jar</packaging> in order to get a jar file 
 
