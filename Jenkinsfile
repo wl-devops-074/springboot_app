@@ -21,22 +21,12 @@ pipeline {
     
   stages {
   
-/*   stage('clean the packages') {
+   stage('build the code') {
       steps {
-        sh 'mvn clean'
+        sh 'mvn clean install'
       }
     }
-   stage('install the packages') {
-      steps {
-        sh 'mvn package'
-      }
-    }
-   stage('unit test') {
-      steps {
-        sh 'mvn test'
-      }
-    } 
-  
+   
    stage("publish to nexus") {
             steps {
                 script {
@@ -79,8 +69,8 @@ pipeline {
                 }
             }
    }
-  */  
-   stage('get the artifact from nexus') {
+   
+  /* stage('get the artifact from nexus') {
       steps {
         sh 'rm -rf springboot_app.jar '
 	sh 'curl -u admin:admin123 -o springboot_app.jar "http://172.16.10.10:32000/#browse/browse/assets:spring_boot_artifact/com/wlconsulting/springboot_app/1.0.4-SNAPSHOT/*.jar" -L'
@@ -95,7 +85,7 @@ pipeline {
       }
    }
 
-
+*/ 
 
 
   }
