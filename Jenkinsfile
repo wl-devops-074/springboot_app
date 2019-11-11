@@ -4,7 +4,7 @@ pipeline{
    tools {maven "Maven_home"}
    stages {
   
-  stage('build code as') {
+  stage('build code ') {
       steps {
         sh 'mvn clean install' 
         }
