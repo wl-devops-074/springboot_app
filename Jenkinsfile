@@ -17,11 +17,11 @@ pipeline{
     }
    stages {
   
-  stage('build code as ') {
-      steps {
-        sh 'mvn clean install' 
-        }
-    }
+  //stage('build code as ') {
+      //steps {
+       // sh 'mvn clean install' 
+        //}
+   // }
   
   stage("publish to nexus") {
             steps {
