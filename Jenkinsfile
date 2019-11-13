@@ -84,7 +84,7 @@ pipeline{
    stage('deploy the snapshot of application in kubernetes cluster') {
       steps {
 	      withKubeConfig([credentialsId: 'kubeconfig']) {
-	      sh 'kubectl get ns'
+	      sh 'kubectl apply -f deploy.yaml'
 	      }
             }
    }
