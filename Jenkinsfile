@@ -23,7 +23,7 @@ pipeline{
         //}
    // }
   
- /* stage("publish to nexus") {
+ /* stage("upload the artefact to nexus") {
             steps {
                 script {
                     // Read POM xml file using 'readMavenPom' step , this step 'readMavenPom' is included in: https://plugins.jenkins.io/
@@ -79,7 +79,12 @@ pipeline{
 	      sh 'sudo docker push 172.16.10.10:30005/springboot_app:0.0.3 '
       }
    }
-   
+   stage('deploy the snapshot of application in kubernetes cluster') {
+      steps {
+	      sh 'kubectl get ns'
+	      
+      }
+   }
    }
    
    
