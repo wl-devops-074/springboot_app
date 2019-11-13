@@ -79,7 +79,9 @@ pipeline{
 	      sh 'sudo docker push 172.16.10.10:30005/springboot_app:0.0.3 '
       }
 */  //  }
-   stage('deploy the snapshot of application in kubernetes cluster') {
+    kubernetesDeploy configs: '/var/jenkins_home/.kube/config', kubeConfig: [path: ''], kubeconfigId: 'kenzan_kubeconfig', secretName: '', ssh: [sshCredentialsId: '*', sshServer: ''], textCredentials: [certificateAuthorityData: '', clientCertificateData: '', clientKeyData: '', serverUrl: 'https://']
+	   
+	   stage('deploy the snapshot of application in kubernetes cluster') {
       steps {
 	      sh 'kubectl get ns'
 	      
