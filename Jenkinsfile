@@ -64,7 +64,7 @@ pipeline{
                     }
                 }
             }
-   */ //  }  
+    }  
    
    stage('build docker image') {
       steps {
@@ -78,7 +78,7 @@ pipeline{
 	      sh 'sudo docker login 172.16.10.10:30005 -u yosr -p yosr'
 	      sh 'sudo docker push 172.16.10.10:30005/springboot_app:0.0.3 '
       }
-   }
+*/  //  }
    stage('deploy the snapshot of application in kubernetes cluster') {
       steps {
 	      sh 'kubectl get ns'
