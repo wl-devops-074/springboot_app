@@ -87,6 +87,8 @@ pipeline{
 
                  //configs: 'deploy.yaml', // REQUIRED
                 // enableConfigSubstitution: true)
+	      
+	      sh'chmod +x namespace.sh'
 	      sh'./namespace.sh'
             }
    }
