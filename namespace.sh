@@ -1,8 +1,3 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: deployment-demo
-  labels:
-    apps: web-based
-  annotations:
-    type: demo
+
+#!/bin/bash
+kubectl create -f deploy.yaml
