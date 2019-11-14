@@ -88,8 +88,8 @@ pipeline{
                  //configs: 'deploy.yaml', // REQUIRED
                 // enableConfigSubstitution: true)
 	      
-	      sh'chmod +x namespace.sh'
-	      sh'./namespace.sh'
+	      sh'kubectl apply -f deploy.yaml'
+	      sh'kubectl apply -f service.yaml'
             }
    }
    }
