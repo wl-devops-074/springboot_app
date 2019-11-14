@@ -4,13 +4,13 @@ metadata:
   name: springbootapp
   namespace: registry
   labels:
-   snapshot: 1.0.4
+   snapshot: 0.0.3
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        snapshot: 1.0.4
+        snapshot: 0.0.3
 
     spec:
       containers:
