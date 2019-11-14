@@ -86,7 +86,7 @@ pipeline{
 	     kubernetesDeploy(kubeconfigId: 'kubeconfig',               // REQUIRED
 
                  configs: 'deploy.yaml', // REQUIRED
-                 enableConfigSubstitution: false)
+                 enableConfigSubstitution: true)
             }
    }
    }
