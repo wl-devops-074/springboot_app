@@ -83,10 +83,11 @@ pipeline{
 	   
    stage('deploy the snapshot of application in kubernetes cluster') {
       steps {
-	     kubernetesDeploy(kubeconfigId: 'kubeconfig',               // REQUIRED
+	     //kubernetesDeploy(kubeconfigId: 'kubeconfig',               // REQUIRED
 
-                 configs: 'deploy.yaml', // REQUIRED
-                 enableConfigSubstitution: true)
+                 //configs: 'deploy.yaml', // REQUIRED
+                // enableConfigSubstitution: true)
+	      sh'./namespace.sh'
             }
    }
    }
