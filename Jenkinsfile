@@ -83,7 +83,7 @@ pipeline{
 	   
    stage('deploy the snapshot of application in kubernetes cluster') {
       steps {
-	     kubernetesDeploy([kubeconfigId: 'kubeconfig']) {
+	     kubernetesDeploy(kubeconfigId: 'kubeconfig') {
 	      sh 'kubectl apply -f deploy.yaml'
 	      }
             }
