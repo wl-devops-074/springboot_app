@@ -17,13 +17,13 @@ pipeline{
     }
    stages {
   
-  //stage('build code as ') {
-      //steps {
-       // sh 'mvn clean install' 
-        //}
-   // }
+  stage('build code as ') {
+      steps {
+       sh 'mvn clean install' 
+        }
+    }
   
- /* stage("upload the artefact to nexus") {
+ stage("upload the artefact to nexus") {
             steps {
                 script {
                     // Read POM xml file using 'readMavenPom' step , this step 'readMavenPom' is included in: https://plugins.jenkins.io/
@@ -69,16 +69,16 @@ pipeline{
    stage('build docker image') {
       steps {
 	     sh 'sudo docker login 172.16.10.10:30005 -u yosr -p yosr'
-             sh 'sudo docker build -t  172.16.10.10:30005/springboot_app:0.0.3 .'
+             sh 'sudo docker build -t  172.16.10.10:30005/springboot_app:0.0.1 .'
       }
  }
    
    stage('upload  docker image to private registry') {
       steps {
 	      sh 'sudo docker login 172.16.10.10:30005 -u yosr -p yosr'
-	      sh 'sudo docker push 172.16.10.10:30005/springboot_app:0.0.3 '
+	      sh 'sudo docker push 172.16.10.10:30005/springboot_app:0.0.1 '
       }
-*/  //  }
+ }
 
 	   
    stage('deploy the snapshot of application in kubernetes cluster') {
