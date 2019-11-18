@@ -5,7 +5,7 @@
 
     <groupId>com.wlconsulting</groupId>
     <artifactId>springboot_app</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
+    <version>0.0.1-SNAPSHOT</version>
     <distributionManagement>
    		<snapshotRepository>
       			<id>snapshots</id>
