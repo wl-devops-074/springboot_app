@@ -69,14 +69,14 @@ pipeline{
    stage('build docker image') {
       steps {
 	     sh 'sudo docker login 172.16.10.10:30005 -u yosr -p yosr'
-             sh 'sudo docker build -t  172.16.10.10:30005/springboot_app:0.0.1 .'
+             sh 'sudo docker build -t  172.16.10.10:30005/springboot_app:0.0.2 .'
       }
  }
    
    stage('upload  docker image to private registry') {
       steps {
 	      sh 'sudo docker login 172.16.10.10:30005 -u yosr -p yosr'
-	      sh 'sudo docker push 172.16.10.10:30005/springboot_app:0.0.1 '
+	      sh 'sudo docker push 172.16.10.10:30005/springboot_app:0.0.2 '
       }
  }
 
