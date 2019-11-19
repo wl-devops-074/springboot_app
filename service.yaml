@@ -4,12 +4,12 @@ metadata:
   name: springbootapp
   namespace: registry
   labels:
-    snapshot: 0.0.2
+    snapshot: 0.0.3
 spec:
   ports:
   - port: 8080
     targetPort: 8080
-    nodePort: 30006
+    nodePort: 30007
   selector:
-    snapshot: 0.0.2
+    snapshot: 0.0.3
   type: NodePort
