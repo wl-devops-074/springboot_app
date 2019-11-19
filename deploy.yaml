@@ -4,23 +4,23 @@ metadata:
   name: springbootapp
   namespace: registry
   labels:
-    snapshot: 0.0.2 
+    snapshot: 0.0.3 
   
 spec:
   replicas: 1
   selector:
     matchLabels:
-       snapshot: 0.0.2 
+       snapshot: 0.0.3 
   template:
     metadata:
       labels:
-        snapshot: 0.0.2
+        snapshot: 0.0.3
 
     spec:
       containers:
       - resources:
         name: springbootapp
-        image: 172.16.10.10:30005/springboot_app:0.0.2
+        image: 172.16.10.10:30005/springboot_app:0.0.3
         ports:
       imagePullSecrets:
       - name: registrykey
