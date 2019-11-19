@@ -4,9 +4,13 @@ metadata:
   name: springbootapp
   namespace: registry
   labels:
-   snapshot: 0.0.2
+    snapshot: 0.0.2 
+  
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+       snapshot: 0.0.2 
   template:
     metadata:
       labels:
