@@ -17,7 +17,7 @@ pipeline{
     }
    stages {
   
-  stage('build code as ') {
+/*  stage('build code as ') {
       steps {
        sh 'mvn clean install' 
         }
@@ -91,7 +91,7 @@ pipeline{
 	      sh'kubectl apply -f deploy.yaml'
 	      sh'kubectl apply -f service.yaml'
             }
-   }
+*///   }
    }
    
    
