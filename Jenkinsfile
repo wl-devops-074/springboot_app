@@ -15,7 +15,7 @@ pipeline{
         NEXUS_CREDENTIAL_ID = "nexus-credentials"
        
     }
-   stages {
+//   stages {
   
 /*  stage('build code as ') {
       steps {
@@ -92,7 +92,7 @@ pipeline{
 	      sh'kubectl apply -f service.yaml'
             }
 *///   }
-   }
+//   }
    
    
     
